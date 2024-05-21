@@ -8,4 +8,4 @@ Simple NextJS app with tailwindcss that displays a grid of images.
 - In the root folder run the following:
   `npm i && npm run dev`
 
-The project is running in production at XXX
+The project is running in production at https://zora-images.vercel.app/
