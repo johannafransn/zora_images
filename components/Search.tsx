@@ -1,5 +1,6 @@
 "use client";
-import { TColor } from "@/app/types/types";
+import React from "react";
+import { TColor } from "../app/types/types";
 import { useRouter } from "next/navigation";
 import { ChangeEvent } from "react";
 
@@ -58,6 +59,7 @@ export const Search = (props: SearchProps) => {
       </div>
       <div className="mt-1 ml-2 sm:mt-3 sm:ml-3 flex-1 sm:flex-auto w-full sm:w-auto">
         <button
+          data-testid="search"
           onClick={async () => {
             await fetchImages();
             handleRouting();

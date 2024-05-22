@@ -2,7 +2,7 @@
 import useGetImageById from "@/app/hooks/useGetImageById";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-
+import React from "react";
 export default function ImageDetail() {
   const { image, loading } = useGetImageById();
   const router = useRouter();

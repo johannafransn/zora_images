@@ -1,12 +1,13 @@
 "use client";
 
 import { Search } from "./index";
+import React from "react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { TColor, filterOptions } from "@/app/types/types";
+import { TColor, filterOptions } from "../app/types/types";
 import Filter from "./Filter";
 import ToggleButton from "./ToggleButton";
-import useImageSearch from "@/app/hooks/useImageSearch";
+import useImageSearch from "../app/hooks/useImageSearch";
 import Image from "next/image";
 
 const Grid = () => {
@@ -30,11 +31,7 @@ const Grid = () => {
     setSortBy,
   } = useImageSearch();
 
-  useEffect(() => {
-    console.log(images);
-  }, [images]);
-
-  console.log(searchText, "searchtex");
+  useEffect(() => {}, [images]);
 
   const handleFilterChange = (color: TColor) => {
     setSelectedColor(color);
@@ -61,7 +58,10 @@ const Grid = () => {
   };
 
   return (
-    <section className="xl:flex-row flex-col flex justify-center">
+    <section
+      data-testid="grid-component"
+      className="xl:flex-row flex-col flex justify-center"
+    >
       <div className="xl:w-8/12 w-11/12 xl:my-40 mt-10 md:mt-40 flex flex-col gap-6">
         <Search
           fetchImages={fetchImages}

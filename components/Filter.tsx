@@ -20,7 +20,6 @@ const Filter: React.FC<FilterProps> = ({
   const searchParams = useSearchParams();
   const _searchText = searchParams.get("searchText");
   const _sortBy = searchParams.get("sortBy") as string | null;
-  const _color = searchParams.get("color") as TColor;
 
   const handlerFilterByChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     handleFilterChange(e.target.value as TColor);
