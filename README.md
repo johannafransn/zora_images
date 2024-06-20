@@ -1,6 +1,6 @@
 # Zora images
 
-Simple NextJS app with tailwindcss that displays a grid of images.
+Simple NextJS app with tailwindcss that displays a grid of images. Fetches the Images from Unsplash API
 
 **How to run this project locally**
 
